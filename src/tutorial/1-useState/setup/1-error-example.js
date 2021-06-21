@@ -1,7 +1,12 @@
 import React from 'react';
 
 const ErrorExample = () => {
-  return <h2>useState error example</h2>;
+  return (
+      <div>
+         <h2>Title of the page</h2>
+         <button >Change title</button>
+      </div>
+  )
 };
 
 export default ErrorExample;
