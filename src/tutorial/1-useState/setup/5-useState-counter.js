@@ -7,6 +7,14 @@ const UseStateCounter = () => {
      setCount(count)
    }
 
+   const handleEncrease = () => {
+     setTimeout(() => {
+        setCount((prevState) => {
+            return (prevState + 1)
+        })
+     }, 2000);
+   }
+
   return (
       <>
         <section>
@@ -15,6 +23,10 @@ const UseStateCounter = () => {
            <button type="button" className="btn" onClick={() => handleClick(count - 1)}>Decrease</button>
            <button type="button" className="btn" onClick={() => handleClick(0)}>Reset</button>
            <button type="button" className="btn" onClick={() => handleClick(count + 1)}>Increase</button>
+
+           <h2>Complex Counter</h2>
+           <h3>{count}</h3>
+           <button type="button" className="btn" onClick={handleEncrease}>Increase</button>
         </section>
      </>
   )
